@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PitchPal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="app-shell">
+  <header class="topbar">
+    <a href="#" class="brand" data-page="home">
+      <span class="brand-icon">♫</span>
+      <span>PitchPal<span class="brand-dot">.</span></span>
+    </a>
+
+    <nav class="nav-links">
+      <button class="nav-link active" data-page="home">Home</button>
+      <button class="nav-link" data-page="training">Training</button>
+      <button class="nav-link" data-page="piano">Piano</button>
+    </nav>
+
+    <div class="topbar-label">
+      <span class="status-dot"></span>
+      Your musical journey
+    </div>
+  </header>
+
+  <main>
+    <section class="page active" id="home">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">YOUR EAR. YOUR MUSIC. YOUR JOURNEY.</span>
+
+          <h1>Hear the note.<br />
+            <span>Know the music.</span>
+          </h1>
+
+          <p class="hero-description">
+            Train your ears, discover notes, and build the confidence
+            to play music your own way.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-page="training">
+              Start learning <span>→</span>
+            </button>
+            <button class="btn btn-secondary" data-page="piano">
+              Explore piano
+            </button>
+          </div>
+
+          <div class="hero-note">
+            <span class="note-symbol">♪</span>
+            <span>Made for self-taught musicians</span>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <div class="glow"></div>
+          <div class="music-orbit orbit-one"></div>
+          <div class="music-orbit orbit-two"></div>
+
+          <div class="note-float note-one">♪</div>
+          <div class="note-float note-two">♫</div>
+
+          <div class="music-card">
+            <div class="music-card-top">
+              <span>YOUR DAILY PRACTICE</span>
+              <span class="music-card-icon">♫</span>
+            </div>
+
+            <div class="sound-wave">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </div>
+
+            <div class="music-card-bottom">
+              <div>
+                <strong>Listen closer.</strong>
+                <p>Every note has a name.</p>
+              </div>
+              <span class="play-icon">▶</span>
+            </div>
+
+            <div class="mini-keyboard">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+            </div>
+          </div>
+
+          <div class="floating-label">
+            <span>✦</span> Find your sound
+          </div>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">YOUR STARTING POINT</span>
+          <h2>What do you want to practice?</h2>
+          <p>Choose a path and start building your musical skills.</p>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon purple">♫</div>
+          <span class="card-tag">EAR TRAINING</span>
+          <h3>Recognize the notes</h3>
+          <p>Listen to musical notes and train yourself to identify their pitch.</p>
+          <button class="text-link" data-page="training">
+            Start training <span>→</span>
+          </button>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon blue">⌘</div>
+          <span class="card-tag">VIRTUAL INSTRUMENT</span>
+          <h3>Explore the piano</h3>
+          <p>Get familiar with piano keys and discover how notes fit together.</p>
+          <button class="text-link" data-page="piano">
+            Open keyboard <span>→</span>
+          </button>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon orange">♬</div>
+          <span class="card-tag">MUSICAL GROWTH</span>
+          <h3>Play with confidence</h3>
+          <p>Work toward recognizing melodies and playing along with a band.</p>
+          <button class="text-link" data-page="training">
+            Explore learning <span>→</span>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section id="training" class="page">
+  <div class="training-container">
+
+    <div class="training-heading">
+      <p class="training-eyebrow">PITCHPAL TRAINING ROOM</p>
+      <h1>Train your ears.</h1>
+      <p>Listen carefully and identify the note you hear.</p>
+    </div>
+
+    <div class="training-card" id="quiz-panel">
+
+      <div class="training-top-row">
+        <div>
+          <span class="training-label">YOUR FIRST LEVEL</span>
+          <h2>Natural Notes</h2>
+        </div>
+        <span class="training-count" id="question-count">1 / 10</span>
+      </div>
+
+      <div class="training-progress">
+        <div id="progress-fill"></div>
+      </div>
+
+      <div class="training-score-row">
+        <span>Progress</span>
+        <strong id="score-display">Score: 0</strong>
+      </div>
+
+      <div class="training-listen">
+        <div class="sound-orb">
+          <span>♪</span>
+        </div>
+
+        <h3>Which note did you hear?</h3>
+        <p>Tap below to listen. You can replay the note as many times as you need.</p>
+
+        <button id="play-note-btn" class="play-note-btn">
+          <span>▶</span> Play note
+        </button>
+      </div>
+
+      <div class="answer-grid" id="answer-grid">
+        <button class="answer-btn" data-note="C">C</button>
+        <button class="answer-btn" data-note="D">D</button>
+        <button class="answer-btn" data-note="E">E</button>
+        <button class="answer-btn" data-note="F">F</button>
+        <button class="answer-btn" data-note="G">G</button>
+        <button class="answer-btn" data-note="A">A</button>
+        <button class="answer-btn" data-note="B">B</button>
+      </div>
+
+      <p id="feedback-message" class="feedback-message" aria-live="polite">
+        Listen to the note, then choose your answer.
+      </p>
+
+      <button id="next-question-btn" class="next-question-btn" disabled>
+        Next question →
+      </button>
+    </div>
+
+    <div class="training-card results-card" id="results-panel" hidden>
+      <div class="results-icon">♫</div>
+      <p class="training-eyebrow">SESSION COMPLETE</p>
+      <h2>Nice work!</h2>
+      <p id="final-score">You scored 0 out of 10.</p>
+      <p id="final-message">Every practice session helps train your ears.</p>
+      <button id="restart-quiz-btn" class="next-question-btn">
+        Practice again ↻
+      </button>
+    </div>
+
+    <p class="training-tip">
+      <strong>Practice tip:</strong> Try humming the sound after you hear it.
+      Connecting a note to your voice can help you remember its pitch.
+    </p>
+
+  </div>
+</section>
+
+<section id="piano" class="page">
+  <div class="piano-container">
+
+    <div class="piano-heading">
+      <p class="piano-eyebrow">PITCHPAL PIANO ROOM</p>
+      <h1>Play your notes<span class="brand-dot">.</span></h1>
+      <p>Explore the piano, listen to each note, and train your musical ear.</p>
+    </div>
+
+    <div class="piano-card">
+
+      <div class="piano-toolbar">
+        <div>
+          <span class="piano-label">NOW PLAYING</span>
+          <h2 id="current-note">Ready to play</h2>
+        </div>
+
+        <div class="piano-octave">
+          <span>OCTAVE</span>
+          <strong>4</strong>
+        </div>
+      </div>
+
+      <div class="piano-instructions">
+        <span>♪</span>
+        Click any piano key to hear its note.
+      </div>
+
+      <div class="piano-keyboard-wrapper">
+        <div class="piano-keyboard" id="piano-keyboard">
+
+          <button class="piano-key white-key" data-note="C4">
+            <span>C</span>
+          </button>
+          <button class="piano-key white-key" data-note="D4">
+            <span>D</span>
+          </button>
+          <button class="piano-key white-key" data-note="E4">
+            <span>E</span>
+          </button>
+          <button class="piano-key white-key" data-note="F4">
+            <span>F</span>
+          </button>
+          <button class="piano-key white-key" data-note="G4">
+            <span>G</span>
+          </button>
+          <button class="piano-key white-key" data-note="A4">
+            <span>A</span>
+          </button>
+          <button class="piano-key white-key" data-note="B4">
+            <span>B</span>
+          </button>
+          <button class="piano-key white-key" data-note="C5">
+            <span>C</span>
+          </button>
+
+          <button class="piano-key black-key" data-note="C#4" style="--key-position: 1">
+            <span>C#</span>
+          </button>
+          <button class="piano-key black-key" data-note="D#4" style="--key-position: 2">
+            <span>D#</span>
+          </button>
+          <button class="piano-key black-key" data-note="F#4" style="--key-position: 4">
+            <span>F#</span>
+          </button>
+          <button class="piano-key black-key" data-note="G#4" style="--key-position: 5">
+            <span>G#</span>
+          </button>
+          <button class="piano-key black-key" data-note="A#4" style="--key-position: 6">
+            <span>A#</span>
+          </button>
+
+        </div>
+      </div>
+
+      <div class="piano-legend">
+        <span><i class="legend-white"></i> Natural notes</span>
+        <span><i class="legend-black"></i> Sharp notes</span>
+      </div>
+
+    </div>
+
+    <p class="piano-tip">
+      <strong>Practice tip:</strong> Play C, D, E, F, G, A, and B in order.
+      Listen to how each note sounds different.
+    </p>
+
+  </div>
+</section>
+  </main>
+
+  <footer class="footer">
+    <a href="#" class="brand" data-page="home">
+      <span class="brand-icon">♫</span> PitchPal<span class="brand-dot">.</span>
+    </a>
+    <p>Learn music by listening. Grow by playing.</p>
+  </footer>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
